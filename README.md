@@ -4,8 +4,8 @@
 
 ## Step by step process
 
-Created mongoDB database
-Created .gitignore
+Created mongoDB database  
+Created .gitignore  
 Created README.md
 
 - git init
@@ -35,5 +35,5 @@ Nodemon = Watch server so refresh after changes is not needed
 Concurrently = Run front-end and back-end server concurrently
 ```
 
-Create Server.js & initiialise Express on server
+Create Server.js & initiialise Express on server  
 Created npm scripts in package.jso
