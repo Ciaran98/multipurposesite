@@ -8,6 +8,12 @@ const PORT = process.env.PORT || 5000;
 connectDB();
 // Get request for API
 app.get('/',(req,res) => res.send('API Running'));
-
+// Define Routes
+app.use('/api/auth',require('./routes/api/auth'));
+app.use('/api/posts',require('./routes/api/posts'));
+app.use('/api/products',require('./routes/api/products'));
+app.use('/api/profile',require('./routes/api/profile'));
+app.use('/api/transactions',require('./routes/api/transactions'));
+app.use('/api/users',require('./routes/api/users'));
 // Run Server
 app.listen(PORT, ()=> console.log(`Server started on port ${PORT}`));
