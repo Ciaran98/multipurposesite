@@ -4,12 +4,15 @@
 
 ## Step by step process
 
-- Created mongoDB database
-- Created .gitignore
-- Created README.md
+Created mongoDB database
+Created .gitignore
+Created README.md
+
 - git init
 - npm init
-- install dependencies
+
+install dependencies
+
 - npm i express express-validator bcryptjs config gravatar jsonwebtoken mongoose request
 
 ```
