@@ -54,4 +54,5 @@ Initialised Routes and API folder that will contain the routes for the api, thes
 - profile
 - transactions
 - users
-  Defined routes in the server.js file
+
+Defined routes in the server.js file
