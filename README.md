@@ -1,6 +1,6 @@
 # Multipurpose Site
 
-This is a multipurpose site that will have a few different functions these are:
+This is a multipurpose site that will have multiple functions, these are:
 
 - Store
 - Social Network
@@ -45,4 +45,13 @@ Create Server.js & initiialise Express on server
 Created npm scripts in package.jso  
 Created config folder, and default.json, where default variables will be stored  
 Created db.js, MongoDB database connection is initialised  
-Config folder and its contents not pushed to git as they contain sensitive information
+Config folder and its contents not pushed to git as they contain sensitive information  
+Initialised Routes and API folder that will contain the routes for the api, these are
+
+- auth
+- posts
+- products
+- profile
+- transactions
+- users
+  Defined routes in the server.js file
