@@ -36,4 +36,6 @@ Concurrently = Run front-end and back-end server concurrently
 ```
 
 Create Server.js & initiialise Express on server  
-Created npm scripts in package.jso
+Created npm scripts in package.jso  
+Created config folder, and default.json, where default variables will be stored  
+Created db.js, MongoDB database connection is initialised there
