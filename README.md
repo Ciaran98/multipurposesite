@@ -55,4 +55,9 @@ Initialised Routes and API folder that will contain the routes for the api, thes
 - transactions
 - users
 
-Defined routes in the server.js file
+Defined routes in the server.js file  
+Created new workspace on Postman for api testing purposes  
+Initialised Models folder for database schemas  
+Created User model  
+Initialise middleware in server.js  
+Created user post request, new user can be registered with name, email, encrypted password, and gravatar picture
