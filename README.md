@@ -1,6 +1,6 @@
 # Multipurpose Site
 
-## 01/06/2022
+01/06/2022
 
 ## Step by step process
 
