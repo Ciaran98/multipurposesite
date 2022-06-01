@@ -1,8 +1,14 @@
 # Multipurpose Site
 
-01/06/2022
+This is a multipurpose site that will have a few different functions these are:
+
+- Store
+- Social Network
+- More to be added later
 
 ## Step by step process
+
+_01/06/2022_
 
 Created mongoDB database  
 Created .gitignore  
