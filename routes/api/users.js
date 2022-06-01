@@ -4,6 +4,9 @@ const {check, validationResult} = require('express-validator');
 const User = require('../../models/User');
 const gravatar = require('gravatar');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+// Todo - Change Jwt expiration date
 // @Route           POST api/users
 // @Description     Validate input data, if errors return 400, else register user
 // @Access          Public
@@ -28,7 +31,7 @@ async (req, res) => {
         // Check if user already exists on DB
         let user = await User.findOne({ email });
         if(user){
-            res.status(400).json({errors:[{msg:'User already exists'}]});
+            return res.status(400).json({errors:[{msg:'User already exists'}]});
         }
         // Get user gravatar
         const avatar = gravatar.url(email,{
@@ -45,17 +48,28 @@ async (req, res) => {
         });
         // Encrypt Password
         const salt = await bcrypt.genSalt(10);
-
+        
         user.password = await bcrypt.hash(password,salt);
-
+        
         await user.save();
         // Return jsonwebtoken
-        
-        res.send('User Registered');
-    } catch (err) {
-        console.error(err.message);
-        res.status(500).send('Server Error');
-    }
-});
-
-module.exports = router;
+        const payload = {
+            user: {
+                id: user.id
+            }
+        }
+        jwt.sign(
+            payload,
+            config.get('jwtSecret'),
+            {expiresIn:36000000},
+            (err, token)=>{
+                if(err) throw err;
+                res.json({token});
+            });
+        } catch (err) {
+            console.error(err.message);
+            res.status(500).send('Server Error');
+        }
+    });
+    
+    module.exports = router;
