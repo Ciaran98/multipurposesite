@@ -63,3 +63,7 @@ Initialise middleware in server.js
 Created user post request, new user can be registered with name, email, encrypted password, and gravatar picture  
 Initialised middleware folder, created auth file  
 Created get user route & login user route in auth route
+
+_02/06/2022_
+
+Created product schema and prodcut route
