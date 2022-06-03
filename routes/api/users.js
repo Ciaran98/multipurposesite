@@ -23,7 +23,7 @@ async (req, res) => {
     const errors = validationResult(req);
     // Return 400 error
     if(!errors.isEmpty()){
-        return res.status(400).json({errors: errors.array()})
+        return res.status(400).json({errors: errors.array()});
     }
     // Retrieve data from request body
     const {name, email, password} = req.body;
